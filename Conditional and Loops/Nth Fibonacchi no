@@ -1,0 +1,50 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+
+
+def F(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        fib = []
+        fib.append(0)
+        fib.append(1)
+        for i in range(2, n+1):
+            fib.append(fib[i-1]+fib[i-2])
+        return fib[n]
+
+
+n = int(input())
+print(F(n))
+
+
+
+
+   
