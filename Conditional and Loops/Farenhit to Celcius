@@ -1,0 +1,8 @@
+S = int(input())
+E = int(input())
+W = int(input())
+while S <= E:
+    a = int((S-32)*0.5556)
+   
+    print(S, a)
+    S = S + W
