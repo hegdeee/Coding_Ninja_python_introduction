@@ -1,0 +1,15 @@
+n = int(input( ))
+P = 1
+for i in range(1, n + 1):
+    for j in range(P, P + n):
+        print(j, end=" ")
+    print()
+    if i == ((n + 1)//2):
+        if (n % 2) != 0:
+            P = n*(n - 2) + 1
+        else:
+            P = n * (n - 1) + 1
+    elif i > ((n + 1) // 2):
+        P = P - 2 * n
+    else:
+        P = P + 2 * n
