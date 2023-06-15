@@ -1,0 +1,30 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+n=int(input())
+i=n
+while i>0:
+    j=1
+    while j<=n-i:
+        print('0',end='')
+        j+=1
+    print('*',end='')
+    j=i-1
+    while j > 0:
+        print('0', end='')
+        j -= 1
+    print('*',end='')
+    j=i-1
+    while j > 0:
+        print('0', end='')
+        j -= 1
+    print('*',end='')
+    j=1
+    while j<=n-i:
+        print('0',end='')
+        j+=1
+    
+    
+    print()
+    i -= 1
