@@ -1,0 +1,26 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+n = int(input())
+i = 0
+while(i<n):
+    k=1
+    j=0
+    if(i<n//2):
+        while(k<=i):
+            print(" ",end="")
+            k=k+1
+        while(j<=i):
+            print("* ",end="")
+            j=j+1
+    else:
+        k=i
+        j=i
+        while(k<n-1):
+            print(" ",end="")
+            k=k+1
+        while(j<=n-1):
+            print("* ",end="")
+            j=j+1
+    i=i+1
+    print()
+
