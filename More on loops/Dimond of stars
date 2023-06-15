@@ -1,0 +1,49 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+n = int(input())
+stop = n // 2
+start = 1
+for i in range(1, n + 1):
+    for j in range(1, stop + 1):
+        print(" ", end='')
+    count = start // 2 + 1
+    for k in range(1, start + 1):
+        print("*", end='')
+        if (k <= (start // 2)):
+            count -= 1
+        else:
+            count += 1
+
+    print()
+        
+    if (i <= n // 2):
+        stop -= 1
+        start += 2
+    else:
+        stop += 1
+        start-= 2
