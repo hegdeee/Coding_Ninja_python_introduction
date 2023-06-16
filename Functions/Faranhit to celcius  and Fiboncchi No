@@ -1,0 +1,27 @@
+def printTable(start,end,step):
+
+	while start<=end:
+		d=int((start-32)*0.5556)
+		print(start, d)
+		start=start+step
+	   
+s = int(input())
+e = int(input())
+step = int(input())
+printTable(s,e,step)
+
+--------------------------------------------------------------------------------------------------------------------------------
+#Fibonacchi no
+
+import math
+def checkmember(x):
+    s=int(math.sqrt(x))
+    return s*s==x
+n = int(input())
+r1=5*(n*n)+4
+r2=5*(n*n)-4
+if checkmember(r1) or checkmember(r2):
+    print("true")
+else:
+    print("false")
+
