@@ -1,0 +1,26 @@
+import sys
+
+
+    #Your code goes here
+def find_unique(arr):
+    unique_num = 0
+    for num in arr:
+        unique_num ^= num
+    return unique_num
+
+# Taking input
+t = int(input())
+for i in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    # Calling the function to find the unique element
+    unique_element = find_unique(arr)
+    print(unique_element)
+
+
+
+
+
+
+
+
