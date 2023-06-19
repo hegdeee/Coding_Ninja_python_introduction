@@ -5,7 +5,9 @@ def intersections(arr1, n, arr2, m):
         for j in range(m):
             if arr1[i] == arr2[j]:
                 print(arr1[i],end =" ")
-                arr2[j] = sys.maxsize
+                arr2[j] = sys.maxsize 
+# sys.maxsize to arr2[j] effectively removes the common element from further consideration, 
+# ensuring that it won't be printed again if it appears multiple times in both arrays.
                 break
                
 
