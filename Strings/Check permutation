@@ -1,0 +1,80 @@
+
+from sys import stdin
+def check_permutation(str1, str2):
+ 
+    if len(str1) != len(str2):
+        return False
+    
+
+    freq_table = {}
+    for char in str1:
+        if char in freq_table:
+            freq_table[char] += 1
+        else:
+            freq_table[char] = 1
+    for char in str2:
+        if char in freq_table:
+            freq_table[char] -= 1
+        else:
+            return False
+    
+ 
+    for value in freq_table.values():
+        if value != 0:
+            return False
+    return True
+
+#main
+str1 = stdin.readline().strip();
+str2 = stdin.readline().strip();
+
+ans = check_permutation(str1, str2)
+
+if ans :
+    print('true')
+else :
+    print('false')
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# another way
+
+from sys import stdin
+def isPermutation(string1, string2) :
+    string1=sorted(string1)
+    string2=sorted(string2)
+    return string1==string2
+    
+#main
+string1 = stdin.readline().strip();
+string2 = stdin.readline().strip();
+
+ans = isPermutation(string1, string2)
+
+if ans :
+    print('true')
+else :
+    print('false')
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+from sys import stdin
+
+
+def isPermutation(string1, string2):
+    if len(string1) != len(string2):
+        return False
+    char = 0
+    for char1, char2 in zip(string1, string2):
+        # ord is used to get unicode
+        char ^= ord(char1) ^ ord(char2)
+    return char == 0
+
+#main
+string1 = stdin.readline().strip();
+string2 = stdin.readline().strip();
+
+ans = isPermutation(string1, string2)
+
+if ans :
+    print('true')
+else :
+    print('false')
