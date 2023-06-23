@@ -1,0 +1,26 @@
+from sys import stdin
+def highestOccuringChar(string) :
+
+    frequency = {}
+    
+    for char in string:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+  
+    highest_char = string[0]
+    highest_freq = frequency[highest_char]
+    for char in frequency:
+        if frequency[char] > highest_freq:
+            highest_char = char
+            highest_freq = frequency[char]
+    
+    return highest_char
+
+	
+#main
+string = stdin.readline().strip();
+ans = highestOccuringChar(string)
+
+print(ans)
