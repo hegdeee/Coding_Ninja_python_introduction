@@ -3,12 +3,9 @@ from sys import stdin
 
 
 def reverseEachWord(string) :
-	# Your code goes here
-
-    words = string.split()
-    reversed_words = [word[::-1] for word in words]  
-    reversed_sentence = " ".join(reversed_words) 
-    return reversed_sentence
+	words=string.split()
+	rev_string=[word[::-1] for word in words]
+	return " ".join(rev_string)
 
 
 #main
@@ -16,15 +13,4 @@ string = stdin.readline().strip()
 
 ans = reverseEachWord(string)
 
-print(ans)
-def reverseEachWord(string):
-    words = string.split()
-    reversed_words = [word[::-1] for word in words]  
-    reversed_sentence = " ".join(reversed_words) 
-    return reversed_sentence
-
-
-# main
-string = input().strip()
-ans = reverseEachWord(string)
 print(ans)
